@@ -1,0 +1,21 @@
+.background {
+    background: center no-repeat url();
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/urltv-mcbattlearena.appspot.com/o/files%2Fblack.jpg?alt=media&token=4542681d-a451-40af-a39e-98f07433a1c5);
+  }
+  
+  .logo {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/urltv-mcbattlearena.appspot.com/o/urltv_web_images%2Furltv_cast_background.jpeg?alt=media&token=b0dbadad-9c82-4a6c-90f3-f90d651bbf52);
+  }
+  
+  .progressBar {
+    background-color: rgb(9, 22, 202);
+  }
+  
+  .splash {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/urltv-mcbattlearena.appspot.com/o/urltv_web_images%2Furltv_cast_background.jpeg?alt=media&token=b0dbadad-9c82-4a6c-90f3-f90d651bbf52);
+  }
+  
+  .watermark {
+    background-image: url(watermark.png);
+    background-size: 57px 57px;
+  }

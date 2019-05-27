@@ -1,0 +1,46 @@
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<!-- package section -->
+<!--<stripe-demo></stripe-demo>-->
+<section class="theme-bg" id="package">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 text-center">
+            <div class="section-title">
+               <h2 class="text-white">Subscription Plans</h2>
+               <img src="assets/images/white-line.png" alt="title-line" class="img-fluid">
+            </div>
+         </div>
+         <div class="col-md-12 text-center">
+            <!-- If images array is dynamically changing pass this array to [items] input -->
+            <owl-carousel [options]="pricingCarousel" [items]="price" [carouselClasses]="['plan-slider owl-carousel owl-theme']">
+               <div class="item" *ngFor="let prices of price">
+                  <div class="package-box">
+                     <h3>{{prices.type}}</h3>
+                     <div class="price-box">
+                        <span>$</span>
+                        <h2>{{prices.price}}</h2>
+                        <h5 class="plan-clr">
+                           <span class="d-block">{{prices.duration}}</span>
+                        </h5>
+                     </div>
+                     <div class="price-plan text-center">
+                        <ul [innerHTML]="prices.feature"></ul>
+                        <div *ngIf="pmt.membership | async as pro">
+                           <!--<div *ngIf="pro.status != 'active'" class="price-plan-btn" (click)="openHandler()">Subscribe</div>
+
+                           <div *ngIf="pro.status == 'active'">
+                             <h3>Subscription is Active</h3> 
+                           </div>-->
+                           <!--<div class="price-plan-btn" (click)="openHandler()">Subscribe</div>-->
+                         </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </owl-carousel>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- end package section -->

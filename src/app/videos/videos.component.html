@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 text-center">
+      <div class="section-title" style="margin-top: 4.0em;">
+        <h2>Recently Added</h2>
+        <img src="assets/images/title-line.png" alt="/title-line">
+        <p>Swipe to see some of the latest battles added to the app. Download to view other exclusive content including
+          interviews, music videos and more.</p>
+      </div>
+    </div>        
+    <div class="col-md-12" style="margin-bottom: 3.5em;">
+      <!-- If images array is dynamically changing pass this array to [items] input -->
+     <owl-carousel [options]="blogCarousel" [items]="video_items" [carouselClasses]="['news-slider owl-carousel owl-theme']">
+         <div class="item news-slid" *ngFor="let video of video_items">
+            <div class="news-box">
+               <a href="">
+                  <img [src]="video.payload.doc.data().thumbnailUrl" alt="news-1" class="img-fluid">
+               </a>
+               <div class="blog-hover">
+               </div>
+            </div>
+            <h5 style="color:black;"><b> Reaction Score Totals </b></h5>
+            <table>
+              <tr>
+                <th>Artist</th>
+                <th>Rnd 1</th>
+                <th>Rnd 2</th>
+                <th>Rnd 3</th>
+                <th>Total</th>
+              </tr>
+              <tr>
+                <td>{{video.payload.doc.data().artist1_short_name}}</td>
+                <td>{{video.payload.doc.data().global_total_round1_artist1}}</td>
+                <td>{{video.payload.doc.data().global_total_round2_artist1}}</td>
+                <td>{{video.payload.doc.data().global_total_round3_artist1}}</td>
+                <td>{{video.payload.doc.data().global_total_artist1}}</td>
+              </tr>
+              <tr>
+                <td>{{video.payload.doc.data().artist2_short_name}}</td>
+                <td>{{video.payload.doc.data().global_total_round1_artist2}}</td>
+                <td>{{video.payload.doc.data().global_total_round2_artist2}}</td>
+                <td>{{video.payload.doc.data().global_total_round3_artist2}}</td>
+                <td>{{video.payload.doc.data().global_total_artist2}}</td>
+              </tr>
+            </table>
+         </div>
+      </owl-carousel>
+   </div>
+  </div>
+</div>

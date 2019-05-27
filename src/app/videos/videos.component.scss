@@ -1,0 +1,47 @@
+.users-list {
+
+    .image-col {
+      text-align:center;
+  
+      .image {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .text-col {
+      margin: auto 0px;
+    }
+    .actions-col {
+      text-align: center;
+      margin: auto 0px;
+  
+      .action {
+        line-height: 1;
+      }
+      .icon {
+        font-size: 20px;
+      }
+    }
+  }
+  
+  /* Add rounded corners to the top left and the top right corner of the image */
+  img {
+    border-radius: 5px 5px 0 0;
+    max-height: 200px;
+  }
+  
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+

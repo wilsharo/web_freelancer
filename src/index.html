@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <title>Ultimate Rap League</title>
+    <meta charset="utf-8">
+    <meta name="description" content="URL TV">
+    <meta name="author" content="App">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- favicon -->
+    <link  rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/urltv-mcbattlearena.appspot.com/o/urltv_web_images%2FApp%20Icon%20b.png?alt=media&token=76032c1e-8b88-434e-a6d5-7d37fb79a74f">
+    <!-- Font Family-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+</head>
+
+<body data-spy="scroll"  data-target=".navbar" data-offset="75">
+<app-root>
+    <!-- loader -->
+    <div class="loader-wrapper">
+        <div id="loader">
+            <div id="shadow"></div>
+            <div id="box"></div>
+        </div>
+    </div>
+    <!-- loader end -->
+</app-root>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140411835-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140411835-1');
+</script>
+<!--<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}
+(document, 'script', 'facebook-jssdk'));
+</script>-->
+<!-- Your customer chat code 
+    <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="2123438804574660"
+    theme_color="#5f57ea"
+    logged_in_greeting="Hi! Welcome to PixelStrap Themes  How can we help you?"
+    logged_out_greeting="Hi! Welcome to PixelStrap Themes  How can we help you?">
+    </div>
+ facebook chat section end -->
+</body>
+
+</html>
