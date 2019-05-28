@@ -14,8 +14,7 @@ export class StripeDemoComponent implements OnInit, AfterViewInit {
   ngOnInit() { }
 
   
-  //api_key : string = 'pk_test_Mg3uNo5oXnEXeDKYBOIW3zKI'; // test key
-  api_key : string = 'pk_live_9rSxLRhRn5GSAZiDFbL0qgEx'; // live key
+  api_key : string = 'pk_test_Mg3uNo5oXnEXeDKYBOIW3zKI'; // test key
 
   card : any;
   stripe : any;
