@@ -9,8 +9,11 @@ import { environment } from "../../../environments/environment";
 })
 export class IntroComponent implements OnInit {
   handler: any;
+  authorized: any;
 
-  constructor(public pmt: PaymentServiceService) {}
+  constructor(public pmt: PaymentServiceService) {
+    this.authorized = false;
+  }
 
   ngOnInit() {
     this.configHandler();
@@ -24,6 +27,7 @@ export class IntroComponent implements OnInit {
       locale: "auto",
       token: token => {
         this.pmt.processPayment(token);
+        this.authorized = true;
       },
     });
   }

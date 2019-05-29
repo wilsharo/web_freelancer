@@ -18,13 +18,13 @@
               <h4>Follow The Innovators, Not The Imitators.</h4>
               <div class="slid-btn">
                 <button
-                  *ngIf="true"
+                  *ngIf="!authorized"
                   style="will-change: transform; transform: perspective(50px) rotateX(0deg) rotateY(0deg);"
                   (click)="openHandler()"
                 >
                   Subscribe Now
                 </button>
-                <span *ngIf="false">
+                <span *ngIf="authorized">
                   <a
                     href="https://play.google.com/store/apps/details?id=tv.urltv"
                     ><img
