@@ -20,14 +20,23 @@ export class IntroComponent implements OnInit {
     public user: AngularFireAuth,
     private firestore: AngularFirestore
   ) {
-    this.authorized = true;
+    // listens for login events
+    this.user.auth.onAuthStateChanged(user => {
+      // on successful login, set email for template
+      this.email = user.email;
+      // lookup subscription status
+      const collectionRef = this.firestore.collection("stripe-users");
+      collectionRef
+        .doc(user.uid)
+        .ref.get()
+        .then(doc => {
+          console.log(doc.data());
+        });
+    });
   }
 
   ngOnInit() {
     this.configHandler();
-    this.user.auth.onAuthStateChanged(user => {
-      this.email = user.email;
-    });
   }
 
   private configHandler() {
