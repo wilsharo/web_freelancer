@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { AngularFirestore } from "@angular/fire/firestore";
 import { PaymentServiceService } from "../../payments/payment-service.service";
 import { environment } from "../../../environments/environment";
+import { tap, catchError, switchMap } from "rxjs/operators";
 
 @Component({
   selector: "app-intro",
@@ -10,13 +13,21 @@ import { environment } from "../../../environments/environment";
 export class IntroComponent implements OnInit {
   handler: any;
   authorized: any;
+  email: any;
 
-  constructor(public pmt: PaymentServiceService) {
-    this.authorized = false;
+  constructor(
+    public pmt: PaymentServiceService,
+    public user: AngularFireAuth,
+    private firestore: AngularFirestore
+  ) {
+    this.authorized = true;
   }
 
   ngOnInit() {
     this.configHandler();
+    this.user.auth.onAuthStateChanged(user => {
+      this.email = user.email;
+    });
   }
 
   private configHandler() {
