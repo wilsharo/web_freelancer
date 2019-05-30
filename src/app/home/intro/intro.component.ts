@@ -24,14 +24,8 @@ export class IntroComponent implements OnInit {
     this.user.auth.onAuthStateChanged(user => {
       // on successful login, set email for template
       this.email = user.email;
-      // lookup subscription status
-      const collectionRef = this.firestore.collection("stripe-users");
-      collectionRef
-        .doc(user.uid)
-        .ref.get()
-        .then(doc => {
-          console.log(doc.data());
-        });
+      // subscription status
+      this.authorized = !!user["status"];
     });
   }
 
