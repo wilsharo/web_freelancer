@@ -57,6 +57,8 @@ export class IntroComponent implements OnInit {
       name: "FireStarter",
       excerpt: "PRO Subscription",
       amount: 1500,
+      shippingAddress: true,
+      billingAddress: true,
     });
   }
 }
